@@ -17,60 +17,8 @@ public class Calculator {
         this.roman1 = roman1;
         this.roman2 = roman2;
     }
-    public boolean verify(String roman){
-        boolean correct=true;
-        for(int i=0;i<=(roman.length()-1);i++){
-         if(roman.length()>=5){
-             if((("IIIII".equals(roman.substring(i, i+5)))&&i+5<roman.length()-1)||"IIIII".equals(roman.substring(i))){
-                correct=false;
-                i=roman.length();  
-                System.out.println("The pattern of Roman numeral is incorrect");
-            } 
-         }
-         else if(roman.length()>=4 ){
-            if((("MMMM".equals(roman.substring(i, i+4)))&&i+4<roman.length()-1)||"MMMM".equals(roman.substring(i))){
-                correct=false;
-                i=roman.length();  
-                System.out.println("The input Roman numeral exceed MMMCMXCIX");
-            }
-             else if((("CCCC".equals(roman.substring(i, i+4)))&&i+4<roman.length()-1)||"CCCC".equals(roman.substring(i))){
-                correct=false;
-                i=roman.length();  
-                System.out.println("The pattern of Roman numeral is incorrect");
-            }
-             else if((("XXXX".equals(roman.substring(i, i+4)))&&i+4<roman.length()-1) || "XXXX".equals(roman.substring(i))){
-                correct=false;
-                i=roman.length();  
-                 System.out.println("The pattern of Roman numeral is incorrect");
-         }
-         }
-         else if(roman.length()>=2){
-             if((("DD".equals(roman.substring(i, i+2)))&&i+2<roman.length()-1)||"DD".equals(roman.substring(i))){
-                correct=false;
-                i=roman.length();  
-                 System.out.println("The pattern of Roman numeral is incorrect");
-            }
-            
-            else if((("LL".equals(roman.substring(i, i+2)))&&i+2<roman.length()-1)||"LL".equals(roman.substring(i))){
-                correct=false;
-                i=roman.length();  
-                 System.out.println("The pattern of Roman numeral is incorrect");
-            }
-           
-            
-            else if((("VV".equals(roman.substring(i, i+2)))&&i+2<roman.length()-1)||"VV".equals(roman.substring(i))){
-                correct=false;
-                i=roman.length();  
-                 System.out.println("The pattern of Roman numeral is incorrect");
-            }
-         }   
-        }
-        return correct;
-    }
-  
    private int convertToInt(String roman){
        int num=0;
-       if(verify(roman1)&&verify(roman2)){
         for(int i=0;i<=(roman.length()-1);i++){
           if(roman.charAt(i)=='I'){
                if(i== (roman.length()-1) || roman.charAt(i+1)=='I'){
@@ -142,9 +90,7 @@ public class Calculator {
           } 
         }
         
-        }
-       else{
-            num = -1;}
+   }
   return num;  
 }
 public int calculate(){
