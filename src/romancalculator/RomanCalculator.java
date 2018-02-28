@@ -33,8 +33,6 @@ public class RomanCalculator {
        operator = input.charAt(operatorIndex);
    
        Calculator cal = new Calculator(roman1,operator,roman2);
-       System.out.println(cal.verify(roman1));
-       System.out.println(cal.verify(roman2));
        cal.answer();
      
     }
