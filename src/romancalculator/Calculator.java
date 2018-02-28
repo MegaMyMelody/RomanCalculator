@@ -35,7 +35,7 @@ public class Calculator {
                else{
                    num= -1;
                    i=roman.length();
-                   System.out.println("Error");
+                   System.out.println("Input Roman numeral is incorrect");
                }
             }
           else if(roman.charAt(i)=='V'&&(i== (roman.length()-1) || roman.charAt(i+1)=='I') )
@@ -55,7 +55,7 @@ public class Calculator {
                else{
                    num= -1;
                    i=roman.length();
-                   System.out.println("Error");
+                   System.out.println("Input Roman numeral is incorrect");
                }
             }
             else if (roman.charAt(i)=='L'&&(i== (roman.length()-1) || roman.charAt(i+1)=='X' || roman.charAt(i+1)=='V' || roman.charAt(i+1)=='I'))
@@ -75,7 +75,7 @@ public class Calculator {
               else{
                    num= -1;
                    i=roman.length();
-                   System.out.println("Error");
+                   System.out.println("Input Roman numeral is incorrect");
                }
               
             } 
@@ -86,7 +86,7 @@ public class Calculator {
           else{
               num = -1;
               i=roman.length();
-              System.out.println("Error");
+              System.out.println("Input Roman numeral is incorrect");
           } 
         }
         
