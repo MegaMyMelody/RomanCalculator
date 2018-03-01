@@ -89,6 +89,10 @@ public class Calculator {
               System.out.println("Input Roman numeral is incorrect");
           } 
         }
+        if (num>3999){
+           num = -1;
+           System.out.println("Your input number exceeds MMMCMXCIX.");
+        }
         
    }
   return num;  
@@ -109,6 +113,7 @@ public int calculate(){
            System.out.println("There are no operator.");
        }   
    }
+    
     else
          ans= -1;
     return ans;   
@@ -172,6 +177,9 @@ public void answer(){
             }     
         }  
         System.out.println("Answer: "+romanAns);
+    }
+     else if (ans>3999){
+        System.out.println("Answer: greater than MMMCMXCIX");
     }
     else if (ans==0){
         System.out.println("Answer: nulla");
